@@ -1,4 +1,34 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-  <string name="app_name">TiltTaxi3D</string>
+    <string name="app_name">TiltTaxi3D</string>
+
+    <string name="difficulty_title">Difficulty</string>
+    <string name="difficulty_map">Map</string>
+    <string name="difficulty_car">Car</string>
+    <string name="difficulty_traffic">Traffic</string>
+    <string name="difficulty_standard_taxi">Standard Taxi</string>
+    <string name="difficulty_fast_taxi_locked">Fast Taxi · Locked</string>
+    <string name="difficulty_save">Save and return</string>
+    <string name="home_selection_format">%1$s · %2$s · %3$s</string>
+
+    <string-array name="map_options">
+        <item>Day City</item>
+        <item>Night City</item>
+    </string-array>
+
+    <string-array name="traffic_options">
+        <item>Regular Traffic</item>
+        <item>Busy Traffic</item>
+    </string-array>
+
+    <string name="settings_title">Settings</string>
+    <string name="settings_steering">Steering method</string>
+    <string name="settings_tilt">Tilt</string>
+    <string name="settings_touch">Touch</string>
+    <string name="settings_sensitivity">Steering sensitivity</string>
+    <string name="settings_sensitivity_levels">Low                       Medium                       High</string>
+    <string name="settings_flip">Swap Brake and Accelerate</string>
+    <string name="settings_save">Save and return</string>
+
+
 </resources>

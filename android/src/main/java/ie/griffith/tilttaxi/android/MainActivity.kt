@@ -1,10 +1,10 @@
 package ie.griffith.tilttaxi.android
 
-import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import ie.griffith.tilttaxi.R
 import ie.griffith.tilttaxi.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
@@ -23,8 +23,10 @@ class MainActivity : AppCompatActivity() {
             insets
         }
 
-        binding.playButton.setOnClickListener {
-            startActivity(Intent(this, AndroidLauncher::class.java))
+        if (savedInstanceState == null) {
+            supportFragmentManager.beginTransaction()
+                .replace(R.id.screenContainer, HomeFragment())
+                .commit()
         }
     }
 }
