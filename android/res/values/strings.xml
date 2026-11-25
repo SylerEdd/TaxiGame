@@ -29,6 +29,7 @@
     <string name="settings_sensitivity_levels">Low                       Medium                       High</string>
     <string name="settings_flip">Swap Brake and Accelerate</string>
     <string name="settings_save">Save and return</string>
-
+    <string name="home_title">City Taxi</string>
+    <string name="home_play">Play</string>
 
 </resources>
