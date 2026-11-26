@@ -78,7 +78,7 @@ class SettingsFragment : Fragment(){
 }
 
 @Composable
-private fun SettingsScreen(
+internal fun SettingsScreen(
     initialUseTilt: Boolean,
     initialSensitivity: Int,
     initialFlipPedals: Boolean,

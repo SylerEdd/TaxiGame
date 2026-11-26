@@ -67,7 +67,7 @@ class HomeFragment : Fragment(){
 }
 
 @Composable
-private fun HomeScreen(
+internal fun HomeScreen(
     selection: String,
     onPlay: () -> Unit,
     onDifficulty: () -> Unit,

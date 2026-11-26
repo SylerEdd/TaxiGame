@@ -69,7 +69,7 @@ class DifficultyFragment : Fragment(){
 }
 
 @Composable
-private fun DifficultyScreen(
+internal fun DifficultyScreen(
     maps: Array<String>,
     trafficOptions: Array<String>,
     initialMap: Int,
