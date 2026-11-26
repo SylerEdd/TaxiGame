@@ -1,9 +1,5 @@
 package ie.griffith.tilttaxi.android
 
-import android.os.Bundle
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
@@ -31,51 +27,13 @@ import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.platform.ComposeView
-import androidx.compose.ui.platform.ViewCompositionStrategy
 import androidx.compose.ui.res.stringArrayResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.semantics.Role
 import androidx.compose.ui.unit.dp
-import androidx.fragment.app.Fragment
 import ie.griffith.tilttaxi.R
 import kotlin.math.roundToInt
 
-class SettingsFragment : Fragment(){
-    override fun onCreateView(
-        inflater: LayoutInflater,
-        container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View {
-        val settings = SettingsStore(requireContext())
-        val initialUseTilt = settings.useTilt
-        val initialSensitivity = settings.sensitivityLevel
-        val initialFlipPedals = settings.flipPedals
-
-        return ComposeView(requireContext()).apply {
-            setViewCompositionStrategy(
-                ViewCompositionStrategy.DisposeOnViewTreeLifecycleDestroyed
-            )
-            setContent{
-                MaterialTheme{
-                    SettingsScreen(
-                        initialUseTilt = initialUseTilt,
-                        initialSensitivity = initialSensitivity,
-                        initialFlipPedals = initialFlipPedals,
-                        onSave = {useTilt, sensitivity, flipPedals ->
-                            settings.save(
-                                useTilt = useTilt,
-                                sensitivityLevel = sensitivity,
-                                flipPedals = flipPedals
-                            )
-                            parentFragmentManager.popBackStack()
-                        }
-                    )
-                }
-            }
-        }
-    }
-}
 
 @Composable
 internal fun SettingsScreen(
